@@ -6,7 +6,6 @@ import Configuration from "./pages/Configuration";
 import Order from "./pages/Order";
 import Successful from "./pages/Successful";
 import Head from "./Components/Head";
-import Layout from "./pages/Layout";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -14,11 +13,9 @@ root.render(
     <BrowserRouter>
       <Head />
       <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Configuration />} />
-          <Route path="Order" element={<Order />} />
-          <Route path="Successful" element={<Successful />} />
-        </Route>
+        <Route path="/" element={<Configuration />} />
+        <Route path="Order" element={<Order />} />
+        <Route path="Successful" element={<Successful />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
